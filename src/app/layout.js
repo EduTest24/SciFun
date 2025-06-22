@@ -1,39 +1,35 @@
-import { Geist, Geist_Mono } from "next/font/google";
+// app/layout.js
+import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import SyncUser from "../../components/SyncUser";
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
-  title: "SciFun ",
-  description: "Where Science meets fun",
+  title: "SciFun",
+  description:
+    " Explore the wonders of science with SciFun, your go-to platform for engaging science content and community.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/logobg.png" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script src="https://cdn.tailwindcss.com"></script>
-
+    <ClerkProvider>
+      <html lang="en">
+        <head>
+          <link rel="icon" href="/logobg.png" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <script src="https://cdn.tailwindcss.com"></script>
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+          />
         </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Header />
-        {children}
-        <Footer />
-      </body>
-    </html>
+
+        <body>
+          <SyncUser />
+          {children}
+          <Toaster position="top-right" />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

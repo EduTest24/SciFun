@@ -1,49 +1,82 @@
-import React from 'react';
+import Image from "next/image";
+import Header from "../../../components/Header";
+import Footer from "../../../components/Footer";
 
-const AboutUs = () => {
- return (
-  <div className="container mx-auto px-4 py-8">
-   <h1 className="text-4xl font-bold text-center mb-8">About Us</h1>
-   
-   <div className="grid md:grid-cols-2 gap-8">
-    <div className="space-y-4">
-     <h2 className="text-2xl font-semibold">Our Mission</h2>
-     <p className="text-gray-700">
-      Our mission is to make science education fun, accessible, and engaging for students of all ages.
-      We believe in hands-on learning and practical experiments that spark curiosity and foster
-      a deep understanding of scientific concepts.
-     </p>
-    </div>
+export default function AboutUs() {
+  return (
+    <>
+      <Header />
+      <section className="bg-[#FCFCFC] py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          {/* Motto & Vision */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1D1D1B] mb-6">
+              About Us
+            </h2>
+            <p className="text-[#61615C] max-w-3xl mx-auto text-lg">
+              At SciFun, our motto is simple:{" "}
+              <span className="italic font-medium text-[#1D1D1B]">
+                "Curiosity Driven, Experimentally Powered."
+              </span>
+              <br />
+              <br />
+              Our vision is to spark a lifelong love for science in every child
+              by combining engaging hands-on activities, creative learning
+              tools, and passionate mentorship. We believe science is not just a
+              subject—it's an adventure.
+            </p>
+          </div>
 
-    <div className="space-y-4">
-     <h2 className="text-2xl font-semibold">Who We Are</h2>
-     <p className="text-gray-700">
-      We are a team of passionate educators, scientists, and innovators dedicated to
-      transforming science education. With years of experience in both education and
-      scientific research, we bring unique insights to our teaching methods.
-     </p>
-    </div>
-   </div>
+          {/* Meet the Teachers */}
+          <div className="mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-[#1D1D1B] text-center mb-10">
+              Meet Our Teachers
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-items-center">
+              {/* Teacher 1 */}
+              <div className="bg-[#EFEFEF] rounded-xl shadow-md overflow-hidden text-center p-5 w-full max-w-xs">
+                <div className="w-28 h-28 mx-auto mb-4 relative rounded-full overflow-hidden">
+                  <Image
+                    src="/Vicky.jpeg"
+                    alt="Mr. Vicky Kumar Singh"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+                <h4 className="text-lg font-semibold text-[#1D1D1B]">
+                  Mr. Vicky Kumar Singh
+                </h4>
+                <p className="text-[#61615C] text-sm mt-2">
+                  B.Tech in CSE – TCET
+                  <br />
+                  2+ Years Experience
+                </p>
+              </div>
 
-   <div className="mt-12">
-    <h2 className="text-2xl font-semibold mb-4">Our Values</h2>
-    <div className="grid md:grid-cols-3 gap-6">
-     <div className="p-4 bg-gray-50 rounded-lg">
-      <h3 className="font-semibold mb-2">Innovation</h3>
-      <p className="text-gray-700">Constantly evolving our methods to provide the best learning experience</p>
-     </div>
-     <div className="p-4 bg-gray-50 rounded-lg">
-      <h3 className="font-semibold mb-2">Excellence</h3>
-      <p className="text-gray-700">Maintaining high standards in everything we do</p>
-     </div>
-     <div className="p-4 bg-gray-50 rounded-lg">
-      <h3 className="font-semibold mb-2">Inclusivity</h3>
-      <p className="text-gray-700">Making science education accessible to everyone</p>
-     </div>
-    </div>
-   </div>
-  </div>
- );
-};
-
-export default AboutUs;
+              {/* Teacher 2 */}
+              <div className="bg-[#EFEFEF] rounded-xl shadow-md overflow-hidden text-center p-5 w-full max-w-xs">
+                <div className="w-28 h-28 mx-auto mb-4 relative rounded-full overflow-hidden">
+                  <Image
+                    src="/owner.jpg"
+                    alt="Mr. Ram Sharma"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+                <h4 className="text-lg font-semibold text-[#1D1D1B]">
+                  Mr. Ram Sharma
+                </h4>
+                <p className="text-[#61615C] text-sm mt-2">
+                  B.E. in CSE – University of Mumbai
+                  <br />
+                  5+ Years Experience
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </>
+  );
+}

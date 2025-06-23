@@ -1,5 +1,5 @@
-import { connectDB } from "../../../../../lib/db";
-import { StudentInfo } from "../../../../../models/StudentInfo";
+import { connectDB } from "@/lib/db";
+import { StudentInfo } from "@/models/StudentInfo";
 
 export async function POST(req) {
   try {

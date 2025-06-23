@@ -1,6 +1,6 @@
 // /app/api/attendance/mark/route.js
-import { connectDB } from "../../../../lib/db";
-import { Attendance } from "../../../../models/Attendence";
+import { connectDB } from "@/lib/db";
+import { Attendance } from "@/models/Attendence";
 
 export async function POST(req) {
   try {

@@ -1,9 +1,8 @@
-import Head from "next/head";
-import HeroSection from "../../components/HeroSection";
-import OurPrograms from "../../components/OurPrograms";
-import InteractiveLearning from "../../components/InteractiveLearning";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+import HeroSection from "@/components/HeroSection";
+import OurPrograms from "@/components/OurPrograms";
+import InteractiveLearning from "@/components/InteractiveLearning";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (

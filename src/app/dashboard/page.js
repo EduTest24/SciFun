@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useUser } from "@clerk/nextjs";
-import ProfileForm from "../../../components/ProfileForm";
-import AttendanceRecord from "../../../components/AttendenceRecord";
+import ProfileForm from "@/components/ProfileForm";
+import AttendanceRecord from "@/components/AttendenceRecord";
 import Image from "next/image";
 import Link from "next/link";
 

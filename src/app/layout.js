@@ -2,6 +2,7 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
+import SyncUser from "@/components/SyncUser";
 
 export const metadata = {
   title: "SciFun",
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
         </head>
 
         <body>
+          <SyncUser />
           {children}
           <Toaster position="top-right" />
         </body>
